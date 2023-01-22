@@ -1,11 +1,21 @@
 import React from 'react';
 import logo from './logo.svg';
-import './App.scss';
+import Searchbar from './Searchbar';
+import { getInputDataStrength } from "../services/AppService";
+import "./App.scss";
+import Gauge from './Gauge';
+import Metrics from './Metrics';
 
 function App() {
+  // getInputDataStrength().subscribe( (data) => {
+  //   console.log(data);
+  // })
   return (
-    <div className="App">
-      <header className="App-header">
+    <div className="app-container">
+      <Searchbar />
+      {/* <Gauge /> */}
+      <Metrics />
+      {/* <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
           Edit <code>src/App.tsx</code> and save to reload.
@@ -18,7 +28,7 @@ function App() {
         >
           Learn React
         </a>
-      </header>
+      </header> */}
     </div>
   );
 }
